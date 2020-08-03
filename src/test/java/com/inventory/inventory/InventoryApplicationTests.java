@@ -8,14 +8,21 @@ import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.mockito.runners.MockitoJUnitRunner;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+
+import com.inventory.ProductApplication;
 import com.inventory.controller.ProductController;
 import com.inventory.entity.Product;
 import com.inventory.service.ProductService;
+@RunWith(MockitoJUnitRunner.class)
+@SpringBootTest(classes=ProductApplication.class)
 
 public class InventoryApplicationTests {	
 	@InjectMocks
